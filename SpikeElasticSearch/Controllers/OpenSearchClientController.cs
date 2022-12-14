@@ -28,7 +28,7 @@ namespace SpikeElasticSearch.Controllers
         public async Task<ActionResult<OpensearchResponseDto>> SearchResult(
             [FromBody] OpensearchRequestDto request)
         {
-
+            // URL
             var nodeAddress = new Uri("https://vpc-chargingnetworkmanager-bskuutvcgy73xjahxqi2d2elly.eu-west-1.es.amazonaws.com");
             var config = new ConnectionSettings(nodeAddress);
             IOpenSearchClient client = new OpenSearchClient(config);
