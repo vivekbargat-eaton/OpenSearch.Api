@@ -67,12 +67,12 @@ namespace SpikeElasticSearch.Controllers
             {
 
                 //opensearchResponseDto.documents = JsonConvert.SerializeObject(searchResponse.Documents, Formatting.Indented);
+                
                 opensearchResponseDto.documents = new();
-
                 foreach (var document in searchResponse.Documents)
                 {
                     Document? document1 = new();
-                   // document1 = (Response)document;
+                    // document1 = (Document)document;
 
                     opensearchResponseDto.documents.Add(document1);
                 }
@@ -85,7 +85,6 @@ namespace SpikeElasticSearch.Controllers
             organization
             date range filter
             pagging
-
             default filter
             custom filter
                           
